@@ -5,14 +5,19 @@ import App from './App';
 
 // Import and create Redux store
 
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
+
+// Import Redux Thunk
+import thunk from 'redux-thunk';
 
 // Import Reducer(s)
 
 import { playerReducer } from './reducers/PlayerReducer.js';
 
-const store = createStore(playerReducer);
+const store = createStore(
+                playerReducer,
+                applyMiddleware(thunk));
 
 ReactDOM.render(
     <Provider store={store}>
