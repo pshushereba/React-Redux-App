@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+// Import components
+import Search from './components/Search.js';
 
 function App() {
   return (
     <div className="App">
-      
+      <Search />
     </div>
   );
 }

@@ -8,6 +8,10 @@ import App from './App';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
+// Import Reducer(s)
+
+import { playerReducer } from './reducers/PlayerReducer.js';
+
 const store = createStore(playerReducer);
 
 ReactDOM.render(
